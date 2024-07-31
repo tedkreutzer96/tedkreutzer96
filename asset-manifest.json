@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tedkreutzer96/static/css/main.b2ab9d49.css",
-    "main.js": "/tedkreutzer96/static/js/main.2bcfa33d.js",
+    "main.css": "/tedkreutzer96/static/css/main.476d77b7.css",
+    "main.js": "/tedkreutzer96/static/js/main.4d9d2237.js",
     "static/media/react-logo.png": "/tedkreutzer96/static/media/react-logo.f2bac7a4cf2cf0e5e06b.png",
     "static/media/redux-logo.png": "/tedkreutzer96/static/media/redux-logo.1b4bb5fceb01b19da59d.png",
     "static/media/javascript-logo.png": "/tedkreutzer96/static/media/javascript-logo.649a896f8c09e1c99df5.png",
@@ -13,11 +13,11 @@
     "static/media/figma-logo.png": "/tedkreutzer96/static/media/figma-logo.46400ab8543f71a3650b.png",
     "index.html": "/tedkreutzer96/index.html",
     "static/media/css-logo.svg": "/tedkreutzer96/static/media/css-logo.6ec1697a406483c72ccf775894d16777.svg",
-    "main.b2ab9d49.css.map": "/tedkreutzer96/static/css/main.b2ab9d49.css.map",
-    "main.2bcfa33d.js.map": "/tedkreutzer96/static/js/main.2bcfa33d.js.map"
+    "main.476d77b7.css.map": "/tedkreutzer96/static/css/main.476d77b7.css.map",
+    "main.4d9d2237.js.map": "/tedkreutzer96/static/js/main.4d9d2237.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2ab9d49.css",
-    "static/js/main.2bcfa33d.js"
+    "static/css/main.476d77b7.css",
+    "static/js/main.4d9d2237.js"
   ]
 }
