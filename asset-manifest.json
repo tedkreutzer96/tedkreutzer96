@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tedkreutzer96/static/css/main.b2ab9d49.css",
+    "main.js": "/tedkreutzer96/static/js/main.024d5f20.js",
+    "static/media/react-logo.png": "/tedkreutzer96/static/media/react-logo.f2bac7a4cf2cf0e5e06b.png",
+    "static/media/redux-logo.png": "/tedkreutzer96/static/media/redux-logo.1b4bb5fceb01b19da59d.png",
+    "static/media/javascript-logo.png": "/tedkreutzer96/static/media/javascript-logo.649a896f8c09e1c99df5.png",
+    "static/media/node-logo.png": "/tedkreutzer96/static/media/node-logo.bc50142dcaff3c8a3b6b.png",
+    "static/media/Linkedin-logo.png": "/tedkreutzer96/static/media/Linkedin-logo.7ab7f69ae322f5a4a1d5.png",
+    "static/media/angular-logo.png": "/tedkreutzer96/static/media/angular-logo.1c4c0006f9de7a6f19b0.png",
+    "static/media/typescript-logo.png": "/tedkreutzer96/static/media/typescript-logo.16b157ea18cd87601675.png",
+    "static/media/sass-logo.png": "/tedkreutzer96/static/media/sass-logo.025d9881c518e019994e.png",
+    "static/media/figma-logo.png": "/tedkreutzer96/static/media/figma-logo.46400ab8543f71a3650b.png",
+    "index.html": "/tedkreutzer96/index.html",
+    "static/media/css-logo.svg": "/tedkreutzer96/static/media/css-logo.6ec1697a406483c72ccf775894d16777.svg",
+    "main.b2ab9d49.css.map": "/tedkreutzer96/static/css/main.b2ab9d49.css.map",
+    "main.024d5f20.js.map": "/tedkreutzer96/static/js/main.024d5f20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2ab9d49.css",
+    "static/js/main.024d5f20.js"
+  ]
+}
