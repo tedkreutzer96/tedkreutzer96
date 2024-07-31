@@ -1,3 +1,7 @@
+/**
+ * @deprecated
+ */
+
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -8,6 +12,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+import angular from "./Images/logos/angular-logo.png";
+import css from "./Images/logos/css-logo.svg";
+import figma from "./Images/logos/figma-logo.png";
+import git from "./Images/logos/git-logo.png";
+import javascript from "./Images/logos/javascript-logo.png";
+import node from "./Images/logos/node-logo.png";
+import reactLogo from "./Images/logos/react-logo.png";
+import redux from "./Images/logos/redux-logo.png";
+import sass from "./Images/logos/sass-logo.png";
+import typescript from "./Images/logos/typescript-logo.png";
+
 import Navbar from "./Navbar/Navbar.js";
 
 import "./App.css";
@@ -15,12 +30,39 @@ import LinkedIn from "./Images/Linkedin-logo.png";
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
+  const logosArray = [
+    angular,
+    css,
+    figma,
+    git,
+    javascript,
+    node,
+    reactLogo,
+    redux,
+    sass,
+    typescript,
+  ];
+
   const summaryRef = useRef(null);
   const experienceRef = useRef(null);
   const skillsRef = useRef(null);
+  const experienceTitleRef = useRef(null);
+  const dividerExperienceRef = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
+      //   console.log(
+      //     experienceRef.current.getBoundingClientRect().top -
+      //       window.screen.availHeight
+      //   );
+      //   if (
+      //     experienceRef.current.getBoundingClientRect().top -
+      //       window.screen.availHeight <
+      //     0
+      //   ) {
+      //     experienceTitleRef.current.style = "position: sticky; bottom: 1000";
+      //   }
+      //   // console.log(window.screen);
       if (!scrolled) {
         setScrolled(true);
       } else if (window.scrollY === 0) {
@@ -29,13 +71,21 @@ const App = () => {
     });
   });
 
+  const renderLogos = () => {
+    for (let logo of logosArray) {
+      return <img className="logo" src={logo} />;
+    }
+  };
+
   return (
     <div className="App">
-      <Navbar
-        summaryRef={summaryRef}
-        experienceRef={experienceRef}
-        skillsRef={skillsRef}
-      />
+      <div className="Navbar-wrapper">
+        <Navbar
+          summaryRef={summaryRef}
+          experienceRef={experienceRef}
+          skillsRef={skillsRef}
+        />
+      </div>
       <header className="App-header">
         <h1>Welcome</h1>
 
@@ -55,6 +105,15 @@ const App = () => {
           <svg
             class="arrows"
             style={{ opacity: scrolled ? 0 : 1, transition: "all 1s" }}
+            onClick={() => {
+              const y = summaryRef.current.getBoundingClientRect().top;
+              const offset = window.screen.availWidth > 1000 ? 120 : 0;
+              const windowScroll = window.scrollY;
+              window.scrollTo({
+                top: y + windowScroll - offset,
+                behavior: "smooth",
+              });
+            }}
           >
             <path class="a1" d="M0 0 L30 32 L60 0"></path>
             <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -62,19 +121,28 @@ const App = () => {
           </svg>
         </div>
       </header>
+      <div className="Bio-container" ref={summaryRef}>
+        <div className="Bio-left">
+          <h3 className="About-byline">Bio</h3>
+          <p className="About-content">
+            Dedicated to the philosophy of life-long learning, I’m a software
+            developer with a deep passion for JavaScript, React, CSS, and all
+            things web development. The unique combination of creativity, logic,
+            technology and never running out of new things to learn, drives my
+            excitement and passion for web development. When I’m not at my
+            computer I like to spend my time outdoors, reading, and creating
+            art.
+          </p>
+        </div>
+        <div className="Bio-right">{}</div>
+      </div>
+      <hr className="divider" ref={dividerExperienceRef} />
       <div className="About-container" ref={summaryRef}>
         <h3 className="About-byline">Summary</h3>
         <p className="About-content">
           I am a software developer with over 5 years of experience in
           professional consulting, specializing in popular frontend technologies
           and frameworks such as React and TypeScript, Angular, and Vue. <br />
-          {/* <br />I have worked with industry giants such as J.P. Morgan and
-          Abbott, as well as fast-paced startups. I have gained valuable
-          experience in a wide array of industries, tech stacks, and management
-          styles; I pride myself on being able to work efficiently under tight
-          deadlines while learning new processes, tools, and code bases with the
-          ultimate goal of satisfying stakeholders and delivering high-quality
-          solutions and final products. */}
           <br /> I have consulted on many different projects, including a
           Real-Time Payments app, an e-commerce platform with integrated genetic
           testing and diagnostics reporting for patients and healthcare
@@ -85,9 +153,11 @@ const App = () => {
           final products and experiences.
         </p>
       </div>
-      <hr className="divider" />
+      <hr className="divider" ref={dividerExperienceRef} />
       <div className="About-container" ref={experienceRef}>
-        <h3 className="About-byline">Experience</h3>
+        <h3 className="About-byline" id="experience" ref={experienceTitleRef}>
+          Experience
+        </h3>
         <div className="About-content">
           <div className="Experience-content-heading">
             <strong>Rightpoint</strong>

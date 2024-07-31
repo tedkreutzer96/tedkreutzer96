@@ -1,0 +1,175 @@
+.box-wrapper-left-bio {
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+.box-wrapper-left-text {
+  -webkit-transition-duration: 600ms;
+  transition-duration: 600ms;
+}
+.box-wrapper-right {
+  -webkit-transition-duration: 900ms;
+  transition-duration: 900ms;
+}
+
+.logo-trans-wrapper-1 {
+  -webkit-transition-duration: 1200ms;
+  transition-duration: 1200ms;
+  &.loading {
+    transform: translateY(-1000%);
+    -webkit-transform: translateY(-400%); 
+    @media screen and (max-width: 1230px) {
+      transform: translateX(-1000%);
+      -webkit-transform: translateX(-400%); 
+      
+    }
+  }
+
+}
+.logo-trans-wrapper-2 {
+  -webkit-transition-duration: 1500ms;
+  transition-duration: 1500ms;
+  &.loading {
+    transform: translateY(-1000%);
+    -webkit-transform: translateY(400%); 
+    @media screen and (max-width: 1230px) {
+      transform: translateX(-1000%);
+      -webkit-transform: translateX(400%); 
+      
+    }
+  }
+}
+.logo-trans-wrapper-3 {
+  -webkit-transition-duration: 1800ms;
+  transition-duration: 1800ms;
+  &.loading {
+    transform: translateY(-1000%);
+    -webkit-transform: translateY(-400%); 
+    @media screen and (max-width: 1230px) {
+      transform: translateX(-1000%);
+      -webkit-transform: translateX(-400%); 
+      
+    }
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.box-wrapper.loading.box-wrapper-left-bio,  .box-wrapper.loading.box-wrapper-left-text{
+  transform: translate(-1000%);
+  -webkit-transform: translate(-400%);    
+  @media screen and (max-width: 689px) {
+    transform: none;
+    -webkit-transform:none;    
+  }
+}
+
+.box-wrapper.loading.box-wrapper-right {
+  transform: translate(1000%);        
+  -webkit-transform: translate(400%);
+}
+
+.Bio-container {
+  overflow: hidden;
+  flex-direction: row;
+  margin: 0 5rem;
+  width: auto;
+  @media screen and (max-width: 1230px) {
+    & .About-byline {
+      text-align: center;
+      padding-left: unset;
+    }
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+}
+
+.Bio-left {
+  flex-basis: 40%;
+  & > .About-content {
+    padding-left: 7rem;
+    @media screen and (max-width: 1230px) {
+      padding-left: unset;
+      text-align: center;
+    }
+  }
+}
+
+.Bio-right {
+  flex-basis: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 5rem;
+  @media screen and (max-width: 1230px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  @media screen and (max-width: 689px) {
+    display: none;
+  }
+}
+
+.Bio-logos__first-col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 1230px) {
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+}
+
+.Bio-logos__logo-container {
+  display: flex;
+  height: 140px;
+  width: 160px;
+  
+  
+  border-radius: 8px;
+  padding: 9px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: .325rem;
+  padding: .325rem 0;
+  text-transform: uppercase;
+
+  background: radial-gradient(circle at 100% 100%, #181a26 0, #181a26 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 0 100%, #181a26 0, #181a26 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 100% 0, #181a26 0, #181a26 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+        radial-gradient(circle at 0 0, #181a26 0, #181a26 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+        linear-gradient(#181a26, #181a26) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
+        linear-gradient(#181a26, #181a26) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
+        linear-gradient(116deg, #fa9f42 0%, #0b6e4f 83%, #E0E0E2 100%);
+
+  @media screen and (max-width: 1230px) {
+    height: 100px;
+    width: 120px;
+  }
+
+  @media screen and (max-width: 689px) {
+    height: 70px;
+    width: 90px;
+    background: none;
+  }
+}
+
+
+.Logo-image {
+  height: auto;
+  width: 4rem;
+
+  @media screen and (max-width: 1230px) {
+    width: 2rem
+  }
+}

@@ -5,6 +5,18 @@
   /* background: #0c0d13; */
   /* background: #1F2232; */
   background: #181a26;
+  overflow-x: hidden;
+}
+
+.Navbar-wrapper {
+   background: #08090d;
+    z-index: 1000;
+    font-weight: 300;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    top: 0;
 }
 
 .App-header {
@@ -36,10 +48,7 @@ a {
   color: #6b7fd7;
 }
 
-.Logo-image {
-  height: auto;
-  width: 3rem;
-}
+
 
 @media screen and (max-width: 476px) {
   .App-header {
@@ -54,23 +63,27 @@ a {
   color: #61dafb;
 }
 
+
+
+
+
 .About-container {
+  flex-direction: row;
+}
+
+.About-container, .Bio-container {
   margin: 0 5rem;
-  /* border: 1px solid white; */
   display: flex;
   color: white;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
   margin-top: 3rem;
-  /* justify-content: space-evenly; */
 
   background: rgb(24, 26, 38);
-  /* background: -moz-linear-gradient(180deg, rgba(24,26,38,1) 37%, rgba(8,9,13,1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(24,26,38,1) 37%, rgba(8,9,13,1) 100%);
-  background: linear-gradient(180deg, rgba(24,26,38,1) 37%, rgba(8,9,13,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#181a26",endColorstr="#08090d",GradientType=1);  */
   @media screen and (max-width: 1000px) {
     flex-direction: column;
+    margin: 0 .5rem;
+    align-items: center;
   }
 }
 .About-content {
@@ -86,7 +99,6 @@ a {
 
 .Experience-container {
   margin: 0 10rem;
-  /* border: 1px solid white; */
   display: flex;
   color: white;
   flex-direction: column;
@@ -102,21 +114,23 @@ a {
   }
 }
 
+
+
 .About-byline {
   flex-basis: 40%;
-  /* margin-top: 24px; */
   font-size: 48px;
-  /* font-family: "Roboto Mono", monospace; */
   font-family: "Major Mono Display", monospace;
+  
   font-weight: 300;
   text-align: left;
   padding-left: 7rem;
   @media screen and (max-width: 1000px) {
     padding-left: unset;
+    text-align: center;
   }
-  /* margin-top: 0;
-  margin-bottom: 0; */
-  /* align-self: flex-start; */
+  & > strong {
+    font-weight: 900
+  }
 }
 
 @keyframes App-logo-spin {
@@ -137,9 +151,6 @@ a {
   display: flex;
   flex-direction: row;
   padding-bottom: 5rem;
-  & > strong:nth-child(-n + 2) {
-    /* border-right: 1px solid white; */
-  }
   & > strong {
     font-size: 24px;
     font-family: "Roboto Mono", monospace;
